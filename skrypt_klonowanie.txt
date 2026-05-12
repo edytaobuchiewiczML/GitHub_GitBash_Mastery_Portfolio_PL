@@ -1,0 +1,213 @@
+# Lista wszystkich repozytoriów
+repozytoria=(
+  "Deep_Learning_Mastery_Portfolio_EN"
+  "Deep_Learning_Mastery_Portfolio_PL"
+  "GCP_Mastery_Portfolio_EN"
+  "GCP_Mastery_Portfolio_PL"
+  "GitHub_GitBash_Mastery_Portfolio_EN"
+  "GitHub_GitBash_Mastery_Portfolio_PL"
+  "Machine_Learning_Mastery_Portfolio_EN"
+  "Machine_Learning_Mastery_Portfolio_PL"
+  "Power_BI_Mastery_Portfolio_EN"
+  "Power_BI_Mastery_Portfolio_PL"
+  "Python_Mastery_Portfolio_EN"
+  "Python_Mastery_Portfolio_PL"
+  "SQL_Mastery_Portfolio_EN"
+  "SQL_Mastery_Portfolio_PL"
+  "AWS_Mastery_Portfolio_EN"
+  "AWS_Mastery_Portfolio_PL"
+)
+
+# Podstaw swoją nazwę użytkownika GitHub
+GITHUB_USER="edytaobuchiewiczML"
+
+for repo in "${repozytoria[@]}"; do
+  echo "========================================"
+  echo "Przetwarzam: $repo"
+  
+  # Klonuj do tymczasowego folderu
+  git clone "https://github.com/$GITHUB_USER/$repo.git" "${repo}_temp"
+  
+  # Przenieś folder .git do pustego folderu
+  mv "${repo}_temp/.git" "$repo/"
+  
+  # Usuń tymczasowy folder
+  rm -rf "${repo}_temp"
+  
+  # Wejdź do repozytorium i zaktualizuj
+  cd "$repo"
+  git pull origin main 2>/dev/null || git pull origin master 2>/dev/null
+  cd ..
+  
+  echo "✅ $repo - gotowe!"
+  echo ""
+done
+
+echo "🎉 Wszystkie repozytoria zostały połączone!"
+Edyta@DESKTOP-29FJTN7 MINGW64 ~
+$ cd desktop
+
+Edyta@DESKTOP-29FJTN7 MINGW64 ~/desktop
+$ ls
+'Anaconda Navigator.lnk'*           cv/              Downloads/              'materialy z infoshareacademy'/   Repozytoria_Publiczne/        'Visual Studio Code.lnk'*
+'Anaconda PowerShell Prompt.lnk'*   cybersecurity/  'Jupyter Notebook.lnk'*   prace/                           Spyder.lnk*                    wiedza_github_gitbash/
+'Anaconda Prompt.lnk'*              desktop.ini      książki/                 repozytoria/                    'Visual Studio Code (2).lnk'*
+
+Edyta@DESKTOP-29FJTN7 MINGW64 ~/desktop
+$ cd Repozytoria_Publiczne
+
+Edyta@DESKTOP-29FJTN7 MINGW64 ~/desktop/Repozytoria_Publiczne
+$ # Lista wszystkich repozytoriów
+repozytoria=(
+  "Deep_Learning_Mastery_Portfolio_EN"
+  "Deep_Learning_Mastery_Portfolio_PL"
+  "GCP_Mastery_Portfolio_EN"
+  "GCP_Mastery_Portfolio_PL"
+  "GitHub_GitBash_Mastery_Portfolio_EN"
+  "GitHub_GitBash_Mastery_Portfolio_PL"
+  "Machine_Learning_Mastery_Portfolio_EN"
+  "Machine_Learning_Mastery_Portfolio_PL"
+  "Power_BI_Mastery_Portfolio_EN"
+  "Power_BI_Mastery_Portfolio_PL"
+  "Python_Mastery_Portfolio_EN"
+  "Python_Mastery_Portfolio_PL"
+  "SQL_Mastery_Portfolio_EN"
+  "SQL_Mastery_Portfolio_PL"
+  "AWS_Mastery_Portfolio_EN"
+  "AWS_Mastery_Portfolio_PL"
+)
+
+# Podstaw swoją nazwę użytkownika GitHub
+GITHUB_USER="edytaobuchiewiczML"
+
+for repo in "${repozytoria[@]}"; do
+  echo "========================================"
+  echo "Przetwarzam: $repo"
+
+  # Klonuj do tymczasowego folderu
+  git clone "https://github.com/$GITHUB_USER/$repo.git" "${repo}_temp"
+
+  # Przenieś folder .git do pustego folderu
+  mv "${repo}_temp/.git" "$repo/"
+
+  # Usuń tymczasowy folder
+  rm -rf "${repo}_temp"
+
+  # Wejdź do repozytorium i zaktualizuj
+  cd "$repo"
+  git pull origin main 2>/dev/null || git pull origin master 2>/dev/null
+  cd ..
+
+  echo "✅ $repo - gotowe!"
+  echo ""
+done
+
+echo "🎉 Wszystkie repozytoria zostały połączone!"
+========================================
+Przetwarzam: Deep_Learning_Mastery_Portfolio_EN
+Cloning into 'Deep_Learning_Mastery_Portfolio_EN_temp'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+Already up to date.
+✅ Deep_Learning_Mastery_Portfolio_EN - gotowe!
+
+========================================
+Przetwarzam: Deep_Learning_Mastery_Portfolio_PL
+Cloning into 'Deep_Learning_Mastery_Portfolio_PL_temp'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+Already up to date.
+✅ Deep_Learning_Mastery_Portfolio_PL - gotowe!
+
+========================================
+Przetwarzam: GCP_Mastery_Portfolio_EN
+Cloning into 'GCP_Mastery_Portfolio_EN_temp'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+Already up to date.
+✅ GCP_Mastery_Portfolio_EN - gotowe!
+
+========================================
+Przetwarzam: GCP_Mastery_Portfolio_PL
+Cloning into 'GCP_Mastery_Portfolio_PL_temp'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+Already up to date.
+✅ GCP_Mastery_Portfolio_PL - gotowe!
+
+========================================
+Przetwarzam: GitHub_GitBash_Mastery_Portfolio_EN
+Cloning into 'GitHub_GitBash_Mastery_Portfolio_EN_temp'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+Already up to date.
+✅ GitHub_GitBash_Mastery_Portfolio_EN - gotowe!
+
+========================================
+Przetwarzam: GitHub_GitBash_Mastery_Portfolio_PL
+Cloning into 'GitHub_GitBash_Mastery_Portfolio_PL_temp'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+Already up to date.
+✅ GitHub_GitBash_Mastery_Portfolio_PL - gotowe!
+
+========================================
+Przetwarzam: Machine_Learning_Mastery_Portfolio_EN
+Cloning into 'Machine_Learning_Mastery_Portfolio_EN_temp'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+Already up to date.
+✅ Machine_Learning_Mastery_Portfolio_EN - gotowe!
+
+========================================
+Przetwarzam: Machine_Learning_Mastery_Portfolio_PL
+Cloning into 'Machine_Learning_Mastery_Portfolio_PL_temp'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+Already up to date.
+✅ Machine_Learning_Mastery_Portfolio_PL - gotowe!
+
+========================================
+Przetwarzam: Power_BI_Mastery_Portfolio_EN
+Cloning into 'Power_BI_Mastery_Portfolio_EN_temp'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+Already up to date.
+✅ Power_BI_Mastery_Portfolio_EN - gotowe!
+
+========================================
+Przetwarzam: Power_BI_Mastery_Portfolio_PL
+Cloning into 'Power_BI_Mastery_Portfolio_PL_temp'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+Already up to date.
